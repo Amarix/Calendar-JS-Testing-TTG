@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<link rel="stylesheet" type="text/css" href="css/css4.css">
+<style>
+form {
+	margin: 0 auto;
+	width: 420px;
+}
+input, textarea {
+	width: 400px;
+	height: 30px;
+	padding: 5px;
+	margin-bottom: 10px;
+	font-size: 1em;
+}
+textarea {
+	height: 200px;
+	font-family: Arial;
+	margin-bottom: 25px;
+}
+#submit {
+	width: 85px;
+	height: 35px;
+	border: none;
+	margin-top: 20px;
+	cursor: pointer;
+}
+</style>
+</head>
+<body>
+<div id="welcome" style="font-size:30px; text-align:center; margin-left:26%;margin-top:60px;">Job Application</div>
+<form method="post" action="verify.php">
+	<label>Full name:</label>
+	<input name="name">
+	<label>Phone number:</label>
+	<input name="phone_number">
+	<label>Email address:</label>
+	<input name="email" type="email">
+	<label>Date of Birth:</label>
+	<input name="DOB">
+	<label>Street Address:</label>
+	<input name="address">
+	<label>Position Applied For:</label>
+	<input name="position">
+	<br />
+	<label>At which location?</label>
+	<input name="location">
+	<label>Desired salary?</label>
+	<input name="salary">
+	<label>Availability:</label>
+	<input name="availability">
+	<label>Education:</label>
+	<input name="education" placeholder="Please enter highest level completed or current">
+	<label>Related employment history:</label>
+	<textarea name="history"></textarea>
+	<div class="g-recaptcha" data-sitekey="6LfmkVoUAAAAAG5Y13PCYAERub7GjhSkWBuKNjbq"></div>
+	<input id="submit" name="submit" type="submit" value="Submit">
+</form>
+</body>
+</html>

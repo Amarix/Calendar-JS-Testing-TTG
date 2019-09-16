@@ -1,0 +1,230 @@
+<!doctype html>
+<html>
+<head>
+<!--JQUERY-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+<!--SORT TABLE FUNCTIONS-->
+<script src="../js/sort-table.js"></script>
+
+<!--CALENDAR STYLE SHEET-->
+<link rel="stylesheet" type="text/css" href="../css/Calendar_Style_Sheet.css">
+</head>
+
+<body>
+    <!--HIDDEN VALUES FOR ORGIGIN ID AND SCHEDULE TITLE USED IN THE JAVASCRIPT FUNCTIONS TO CUSTOMIZE THIS PAGE-->
+    <JS_Data_Element id="TG_Custom_Data_Element" data-identifier="503369" data-title="Wake Forest Schedule & Registration" style="display:none"></JS_Data_Element>
+    
+    <div class="location_intro_container">
+        <div class="schedule_title" id="schedule_title_container"></div>
+        <div class="directions">Select an age and gender below. Then select a category to view upcoming events!</div>
+        <div class="directions">Once you've found the perfect class for your child, click the link in the leftmost column to register.</div>
+        <div class="directions">See you there!</div>
+    </div>
+    <div class="search_criteria_container">
+        <div class="search_criteria_container_inner">
+    		<select class="search_criteria_age-gender" name="age_select" onChange="ageSelection(this)">
+    			<option value="null" id="null_age_option">--Select Age--</option>
+    			<option value="0" id="1">1 year</option>
+    			<option value="1" id="2">2 years</option>
+    			<option value="2" id="3">3 years</option>
+    			<option value="3" id="4">4 years</option>
+    			<option value="4" id="5">5 years</option>
+    			<option value="5" id="6">School-Aged</option>
+    		</select>
+    		<select class="search_criteria_age-gender" name="gender_select" onChange="genderSelection(this)">
+    			<option value="null" id="null_gender_option">--Select Gender--</option>
+    			<option value="Boy" id="Boy">Boy</option>
+    			<option value="Girl" id="Girl">Girl</option>
+    		</select>
+    	</div>
+	</div>
+	
+	<div class="event_button_container_outer">
+	    <div class="event_button_container_inner">
+    		<button id="birthdayPartyBtn" class="event_button" value="Birthday" onClick="getEvents(this.value)"> Birthday Parties </button>
+    		<button id="gymnasticsBtn" class="event_button" value="Gymnastics" onClick="getEvents(this.value)"> Gymnastics </button>
+    		<button id="tumblingBtn" class="event_button" value="Tumb" onClick="getEvents(this.value)"> Tumbling </button>
+    		<button id="cheernasticsBtn" class="event_button" value="Cheer" onClick="getEvents(this.value)"> Cheernastics </button>
+    		<button id="dayCampBtn" class="event_button" value="Day" onClick="getEvents(this.value)"> Day Camp </button>
+    		<button id="summerCampBtn" class="event_button" value="Summer" onClick="getEvents(this.value)"> Summer Camp </button>
+    		<button id="parentsNightBtn" class="event_button" value="Parent" onClick="getEvents(this.value)"> Parents' Night Out </button>
+    		<button id="starsTeamBtn" class="event_button" value="Stars" onClick="getEvents(this.value)"> Stars Team </button>
+    		<button id="parkourBtn" class="event_button" value="Parkour" onClick="getEvents(this.value)"> Parkour </button>
+	    </div>
+	</div>
+	
+	<div class="event_week_container" id="event_container">
+	    <div class="event_day_container" id="mon">
+		    <div class="event_day_label">
+		        Monday
+		    </div>
+			<table class="event_info_table">
+			    <thead>
+			        <tr>
+    			        <th></th>
+    			        <th>Class Name</th>
+    			        <th>Description</th>
+    			        <th>Time</th>
+    			        <th>Openings</th>
+    			        <th>Start Date</th>
+    			        <th>End Date</th>
+    			        <th>Tuition - per day/event</th>
+			        </tr>
+			    </thead>
+			    <tbody id="mon_table">
+			        
+			    </tbody>
+			</table>
+		</div>
+		<div class="event_day_container" id="tue">
+		    <div class="event_day_label"> 
+		        Tuesday
+		    </div>
+			<table class="event_info_table">
+			    <thead>
+			        <tr>
+    			        <th></th>
+    			        <th>Class Name</th>
+    			        <th>Description</th>
+    			        <th>Time</th>
+    			        <th>Openings</th>
+    			        <th>Start Date</th>
+    			        <th>End Date</th>
+    			        <th>Tuition - per day/event</th>
+			        </tr>
+			    </thead>
+			    <tbody id="tue_table">
+			        
+			    </tbody>
+			</table>
+		</div>
+		<div class="event_day_container" id="wed">
+		    <div class="event_day_label"> 
+		        Wednesday
+		    </div>
+			<table class="event_info_table">
+			    <thead>
+			        <tr>
+    			        <th></th>
+    			        <th>Class Name</th>
+    			        <th>Description</th>
+    			        <th>Time</th>
+    			        <th>Openings</th>
+    			        <th>Start Date</th>
+    			        <th>End Date</th>
+    			        <th>Tuition - per day/event</th>
+			        </tr>
+			    </thead>
+			    <tbody id="wed_table">
+			        
+			    </tbody>
+			</table>
+		</div>
+		<div class="event_day_container" id="thurs">
+		    <div class="event_day_label">
+		        Thursday
+		    </div>
+			<table class="event_info_table">
+			    <thead>
+			        <tr>
+    			        <th></th>
+    			        <th>Class Name</th>
+    			        <th>Description</th>
+    			        <th>Time</th>
+    			        <th>Openings</th>
+    			        <th>Start Date</th>
+    			        <th>End Date</th>
+    			        <th>Tuition - per day/event</th>
+			        </tr>
+			    </thead>
+			    <tbody id="thurs_table">
+			        
+			    </tbody>
+			</table>
+		</div>
+		<div class="event_day_container" id="fri">
+		    <div class="event_day_label">
+		        Friday
+		    </div>
+			<table class="event_info_table">
+			    <thead>
+			        <tr>
+    			        <th></th>
+    			        <th>Class Name</th>
+    			        <th>Description</th>
+    			        <th>Time</th>
+    			        <th>Openings</th>
+    			        <th>Start Date</th>
+    			        <th>End Date</th>
+    			        <th>Tuition - per day/event</th>
+			        </tr>
+			    </thead>
+			    <tbody id="fri_table">
+			        
+			    </tbody>
+			</table>
+		</div>
+		<div class="event_day_container" id="sat">
+		    <div class="event_day_label">
+		        Saturday
+		    </div>
+			<table class="event_info_table">
+			    <thead>
+			        <tr>
+    			        <th></th>
+    			        <th>Class Name</th>
+    			        <th>Description</th>
+    			        <th>Time</th>
+    			        <th>Openings</th>
+    			        <th>Start Date</th>
+    			        <th>End Date</th>
+    			        <th>Tuition - per day/event</th>
+			        </tr>
+			    </thead>
+			    <tbody id="sat_table">
+			        
+			    </tbody>
+			</table>
+		</div>
+		<div class="event_day_container" id="sun">
+		    <div class="event_day_label"> 
+		        Sunday
+		    </div>
+			<table class="event_info_table">
+			    <thead>
+			        <tr>
+    			        <th></th>
+    			        <th>Class Name</th>
+    			        <th>Description</th>
+    			        <th>Time</th>
+    			        <th>Openings</th>
+    			        <th>Start Date</th>
+    			        <th>End Date</th>
+    			        <th>Tuition - per day/event</th>
+			        </tr>
+			    </thead>
+			    <tbody id="sun_table">
+			        
+			    </tbody>
+			</table>
+		</div>
+	</div>
+	<div class="empty_event_message_container" id="empty_message_container">
+	    <div>
+	        Looks like all upcoming events in this category are full. <br>
+	        Check out our other locations for more options!<br>
+	        <a href="../Calendar_CH_Updated.php">Chapel Hill</a><br>
+	        <a href="../Calendar_FR_Updated.php">Falls River</a><br>
+	        <a href="../Calendar_LB_Updated.php">Lake Boone</a><br>
+	        <a href="../Calendar_SR_Updated.php">Strickland Road</a><br>
+	        <a href="../Calendar_HS_Updated.php">Holly Springs</a><br>
+	    </div>
+	</div>
+	
+	<!-- THIS IS AN IMPORTANT LINE FOR FUNCTIONALITY OF THE CALENDAR PAGE -->
+	<!-- This line must be placed at the bottom of each calendar html page
+	     above the closing tag of the body section -->
+	<script src="../js/Custom_Jackrabbit_Calendar_Functions.js"></script>
+</body>
+</html>

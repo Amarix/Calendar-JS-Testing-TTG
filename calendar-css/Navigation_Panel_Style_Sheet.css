@@ -1,0 +1,212 @@
+* {
+	font-family: "Gill Sans MT", "Gill Sans", Calibri, sans-serif;
+	text-decoration:none;
+	color:#4a75b9;
+}
+page {
+	overflow: hidden;
+}
+.Navigation_Panel_Container {
+    width: 120%;
+    height:310px;
+    margin-top:-10px;
+    margin-left:-10px;
+    background-size: cover;
+	background: url("http://www.thetumblegym.com/img/gradient.jpg") repeat-y;
+	background-attachment: absolute;
+	background-size: contain;
+	-moz-background-size: contain;
+	
+}
+.Menu_Top_Container {
+}
+.button_image_container-table {
+}
+.button_image_container-row {
+    position:absolute;
+    min-width:1000px;
+    padding:0;
+    border:0;
+    width:100%;
+}
+.BI {
+    cursor:pointer;
+}
+.button_image_container-row button {
+    border: none;
+}
+.button1_image {
+    position:absolute;
+    top:50px;
+    right:85%;
+	background: url(http://www.thetumblegym.com/img/button1.png) no-repeat;
+	width:143px;
+	height:149px;
+}
+.button2_image {
+    position:absolute;
+    top:50px;
+    right:70%;
+	background: url(http://www.thetumblegym.com/img/button2.png) no-repeat;
+	width:143px;
+	height:149px;
+}
+.button3_image {
+    position:absolute;
+    top:50px;
+    right:55%;
+	background: url(http://www.thetumblegym.com/img/button3.png) no-repeat;
+	width:143px;
+	height:149px;
+}
+.button4_image {
+    position:absolute;
+    top:50px;
+    right:40%;
+	background: url(http://www.thetumblegym.com/img/button4.png) no-repeat;
+	width:143px;
+	height:149px;
+}
+.button5_image {
+    position:absolute;
+    top:50px;
+    right:25%;
+	background: url(http://www.thetumblegym.com/img/button5.png) no-repeat;
+	width:143px;
+	height:149px;
+}
+.button1_image:hover {
+	background: url(http://www.thetumblegym.com/img/button1_bright.png) no-repeat;
+}
+.button2_image:hover {
+	background: url(http://www.thetumblegym.com/img/button2_bright.png) no-repeat;
+}
+.button3_image:hover {
+	background: url(http://www.thetumblegym.com/img/button3_bright.png) no-repeat;
+}
+.button4_image:hover {
+	background: url(http://www.thetumblegym.com/img/button4_bright.png) no-repeat;
+}
+.button5_image:hover {
+	background: url(http://www.thetumblegym.com/img/button5_bright.png) no-repeat;
+}
+.contact_panel_container {
+    position:absolute;
+    top:20px;
+    right:5%;
+	width:200px;
+	text-align:center;
+	
+}
+.TTG_Logo {
+	width:150px;
+	padding-bottom:0;
+	margin:-10px;
+}
+.email {
+    font-weight:bold;
+	padding-right:5px;
+	padding-left:1px;
+	white-space:nowrap !important;
+	line-height:15px;
+	font-size:0.8em;
+}
+.number {
+    padding-right:5px;
+	padding-left:1px;
+	white-space:nowrap !important;
+	line-height:15px;
+	font-size:0.8em;
+}
+.email:hover{
+    text-shadow: 0 0 2px #fff, 0 0 2px #fff, 0 0 2px #fff, 0 0 2px #fff, 0 0 2px #fff, 0 0 2px #fff, 0 0 2px #fff;
+}
+.email_note {
+	font-size:0.85em;
+}
+.Social_Media_Icon {
+	padding-top:5px;
+	line-height:0 !important;
+	width:20px;
+	height:20px;
+}
+.Social_Media_Icon:hover {
+    box-shadow: 0 1px 0 #fff, 0 1px 0 #fff, 0 1px 0 #fff, 0 1px 0 #fff, 0 1px 0 #fff, 0 0 0 #fff, 0 0 0 #fff;
+}
+.Navigation_Bar {
+    position:absolute;
+    text-align:center;
+    top:300px;
+    left:0;
+	background-color: rgba(75,75,255,1);
+	box-shadow: 0 2px 9px rgba(0,0,0,0.5);
+	color: #FFF;
+	width:100%;
+	height:40px;
+}
+.Navigation_Bar_Item {
+    z-index:2;
+    padding-top:10px;
+    position:relative;
+    float:left;
+	width: 25%;
+	height:30px;
+	font-weight: 700;
+	font-size:1.1em;
+	color:#fff;
+}
+.Navigation_Bar_Item a {
+    color:#fff;
+}
+.Navigation_Bar_Item:hover {
+	white-space: normal;
+	cursor:pointer;
+	background-color: rgba(103,140,255,1);
+	box-shadow: 0 2px 9px rgba(0,0,0,0.5);
+	transition: background-color 0.2s ease-in-out;
+	-webkit-transition: background-color 0.2s ease-in-out;
+	-moz-transition: background-color 0.2s ease-in-out;
+}
+.Navigation_Bar_Item:hover #about_us {
+    display:block;
+}
+.Navigation_Bar_Item:hover #locations {
+    display:block;
+}
+.Navigation_Bar_Item:hover #programs {
+    display:block;
+}
+.Navigation_Bar_Dropdown_Menu {
+    text-align:center;
+    list-style-type: none;
+    display:none;
+    position:relative;
+    z-index:1;
+    margin-top:8px;
+    margin-left:-38px;
+}
+.Navigation_Bar_Dropdown_Menu ul {
+}
+ul li:last-child {
+    border-radius:0px 0px 10px 10px;
+}
+.Navigation_Bar_Dropdown_Menu li {
+    border-top:1px rgba(255, 255, 255, 0.3) solid;
+    background-color: rgba(75,75,255,1);
+    padding:8px 8px 14px 8px;
+}
+.Navigation_Bar_Dropdown_Menu li:hover {
+    white-space: normal;
+	cursor:pointer;
+	background-color: rgba(103,140,255,1);
+	box-shadow: 0 2px 9px rgba(0,0,0,0.5);
+	transition: background-color 0.1s ease-in-out;
+	-webkit-transition: background-color 0.1s ease-in-out;
+	-moz-transition: background-color 0.1s ease-in-out;
+}
+.birthday_bumpers {
+	padding-top:5px;
+	line-height:0 !important;
+	width:20px;
+	height:20px;
+}

@@ -1,0 +1,172 @@
+body {
+	background-color: #4c7ada;
+}
+page {
+	overflow: hidden;
+}
+.Navigation_Panel_Container {
+    width: 120%;
+    height:310px;
+    margin-top:-10px;
+    margin-left:-10px;
+    background-size: cover;
+	background: url("http://www.thetumblegym.com/img/gradient.jpg") repeat-y;
+	background-attachment: absolute;
+	background-size: contain;
+	-moz-background-size: contain;
+	
+}
+#container {
+	width: 100%;
+	background: url("/gradient.jpg");
+	background-repeat: repeat-y;
+	background-attachment: fixed;
+	background-size: contain;
+	-moz-background-size: contain;
+}
+html, body {
+	height: 100%;
+	width: 100%;
+	overflow-x: hidden;
+}
+* {
+	font-family: "Gill Sans MT", "Gill Sans", Calibri, sans-serif;
+}
+body {
+	color: #FFF;
+	text-align: left;
+	margin: 0;
+	padding: 0;
+	max-width: 100%;
+	overflow-x: hidden;
+}
+a:active {
+	color: #FFF;
+	text-decoration: none;
+	outline: 0;
+}
+a:hover {
+	color: #FFF;
+	text-decoration: none;
+	text-shadow: 0 0 2px #FFF;
+}
+p {
+	margin-bottom: 1em;
+	padding: 0;
+}
+div.hr {
+	background: #FFF;
+	height: 2px;
+	margin-top: 15px;
+}
+a:link, a:visited {
+	color: #FFF;
+	text-decoration: none;
+	font-weight: 700;
+}
+a.email:link {
+	color: #4a75b9;
+	font-size: 13px !important;
+}
+a.email:hover {
+	color: #4a75b9;
+	text-shadow: 0 0 2px #FFF !important;
+}
+.center {
+	text-align: center;
+}
+* {
+	margin: 0px;
+	padding: 0px;
+}
+ul {
+	width: 100%;
+	display: inline-block;
+	background-color: rgba(75,75,255,1);
+	text-align: center;
+	color: #FFF;
+	font-weight: 700;
+	margin: 0;
+	padding: 0;
+	white-space: nowrap;
+}
+li {
+	position: relative;
+	display: inline-block;
+	background-color: rgba(75,75,255,1);
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+li:hover {
+	background-color: rgba(130,205,255,0.5);
+	color: #FFF;
+	font-weight: 700;
+}
+li a {
+	color: #FFF;
+	font-weight: 700;
+}
+li a:hover {
+	text-shadow: 0 0 2px #FFF;
+}
+#nav {
+	list-style: none;
+	width: 100%;
+	position: relative;
+	z-index: 5;
+	color: #FFF;
+	font-weight: 700;
+	box-shadow: 0 2px 9px rgba(0,0,0,0.5);
+}
+#nav ul {
+	display: none;
+	list-style: none;
+	position: absolute;
+	margin-top: -3px;
+	margin-left: -4px;
+	background-color: rgba(75,75,255,0);
+	color: #FFF;
+	font-weight: 700;
+	padding: 0;
+}
+#nav ul > li {
+	white-space: normal;
+	position: absolute;
+	left: 5px;
+	top: 3px;
+	width: 100%;
+	display: block;
+	margin-top: 0px;
+	margin-left: -1px;
+	padding-bottom: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
+	background-color: rgba(75,75,255,1);
+	color: #FFF;
+	font-weight: 700;
+	border: 1px rgba(255,255,255,0.5) solid;
+	border-top: 0;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	float: none;
+}
+#nav ul li:hover {
+	white-space: normal;
+	background-color: rgba(103,140,255,1);
+	transition: background-color 0.2s ease-in-out;
+	-webkit-transition: background-color 0.2s ease-in-out;
+	-moz-transition: background-color 0.2s ease-in-out;
+}
+#nav ul li {
+	position: relative;
+}
+#nav li:hover ul {
+	display: block;
+	position: absolute;
+	margin-top: -3px;
+	margin-left: -4px;
+}
+#nav li:hover ul a {
+	text-decoration: none;
+}
